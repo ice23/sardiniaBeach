@@ -45,11 +45,13 @@
 
         document.addEventListener("deviceready", onDeviceReady, false);
         function onDeviceReady() {
+
+            alert('onDeviceReady');
             navigator.splashscreen.show();
             
             
             checkConnection();
-            //alert('splashscreen.show');
+            
 
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(onSuccess, onErrorMyPos);
@@ -829,7 +831,7 @@
            
             
             if (navigator.geolocation && Rfh == '1') {
-               // alert('navigator.geolocation on')
+                alert('navigator.geolocation on')
                 $('#OriginPosition').html('ricerca posizione in corso...');
                 $('#b1_descr').html('ricerca posizione in corso...');
                 $('#b2_descr').html('ricerca posizione in corso...');
